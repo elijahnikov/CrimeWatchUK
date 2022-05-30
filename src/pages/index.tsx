@@ -7,9 +7,13 @@ import { useEffect, useState } from 'react';
 const HomePage = () => {
     return (
         <>
-            <NavBar />
-            <Home />
-            <Footer />
+            <Layout>
+                <main>
+                    <NavBar />
+                    <Home />
+                    <Footer />
+                </main>
+            </Layout>
         </>
     );
 };

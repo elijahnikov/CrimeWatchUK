@@ -1,14 +1,14 @@
-import Layout from '@/components/Common/Layout/Layout';
+import InputField from '@/components/Common/InputField/InputField';
 import DataSection from '@/components/DataSection/DataSection';
 import MapSection from '@/components/MapSection/MapSection';
-import NavBar from '@/components/NavBar/NavBar';
-import SubNav from '@/components/SubNav/SubNav';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface HomeProps {}
 
 const Home = ({}) => {
     const [data, setData] = useState([]);
+    const [dataSectionWidth, setDataSectionWidth] = useState('w-[30vw]');
+    const [mapSetionWidth, setMapSectionWidth] = useState('w-[70vw]');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -24,17 +24,25 @@ const Home = ({}) => {
         fetchData();
     }, []);
 
+    const handleChange = () => {};
+
     return (
-        <Layout>
-            <main>
-                <section className='h-[100vh] bg-scBlack-300'>
-                    {/* <SubNav /> */}
-                    {/* <p className='text-white'>{JSON.stringify(data)}</p> */}
-                    <MapSection />
-                    <DataSection />
-                </section>
-            </main>
-        </Layout>
+        <>
+            <section className='h-[100vh] bg-scBlack-300'>
+                <div className='fixed top-[5vh] z-10 flex h-[6vh] w-[100vw] items-center border-r-[1px] border-scBorder bg-scBlack-300 text-center'>
+                    <div className='ml-5'>
+                        <InputField
+                            name='locationSearch'
+                            placeholder='Search for a location...'
+                            onChangeHandler={handleChange}
+                        />
+                    </div>
+                </div>
+                {/* <p className='text-white'>{JSON.stringify(data)}</p> */}
+                <MapSection />
+                <DataSection />
+            </section>
+        </>
     );
 };
 

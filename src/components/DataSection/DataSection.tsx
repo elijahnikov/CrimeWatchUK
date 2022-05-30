@@ -3,20 +3,17 @@ import React, { useState } from 'react';
 
 interface DataSectionProps {}
 
-const DataSection = ({}) => {
-    const [width, setWidth] = useState('[30vw]');
+const DataSection = ({}: DataSectionProps) => {
+    const [width, setWidth] = useState('w-[30vw]');
 
     return (
         <div
-            className={`fixed right-0 float-right h-[100%] w-${width} bg-red-500`}
+            className={`z-2 fixed right-0 mt-[11vh] h-[84vh] overflow-y-scroll ${width} bg-scBlack-100`}
         >
             <div>
-                <Button
-                    onClick={() => setWidth('700px]')}
-                    className='mt-[50px]'
-                >
-                    TEST
-                </Button>
+                {/* <div className='ml-[50px] mt-[500px] h-[4000px] w-[50%] bg-green-500'>
+                    <Button onClick={() => setWidth('w-[20vw]')}>test</Button>
+                </div> */}
             </div>
         </div>
     );

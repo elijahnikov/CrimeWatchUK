@@ -4,7 +4,7 @@ interface FooterProps {}
 
 const Footer = ({}) => {
     return (
-        <div className='absolute bottom-0 z-10 flex h-[5vh] w-[100vw] items-center bg-scBlack-100 text-center'>
+        <div className='absolute bottom-0 z-10 flex h-[5vh] w-[100vw] items-center bg-scBlack-300 text-center'>
             {/* <div className='absolute right-[2vw] h-full w-1/4'>
                 <div className='absolute top-0 mt-10 flex items-center'>
                     <a href='/'>

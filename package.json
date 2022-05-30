@@ -6,9 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "eslint src --fix && yarn format",
-    "lint:strict": "eslint --max-warnings=0 src",
     "typecheck": "tsc --noEmit --incremental false",
     "test:watch": "jest --watch",
     "test": "jest",
@@ -20,10 +17,17 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.34",
+    "@googlemaps/typescript-guards": "^2.0.0",
+    "@react-google-maps/api": "^2.11.9",
+    "@types/googlemaps": "^3.43.3",
+    "@types/markerclustererplus": "^2.1.33",
     "clsx": "^1.1.1",
+    "fast-equals": "^3.0.3",
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-google-maps": "^9.4.5",
     "react-icons": "^4.3.1",
     "tailwind-merge": "^1.2.1"
   },
