@@ -4,7 +4,7 @@ interface FooterProps {}
 
 const Footer = ({}) => {
     return (
-        <div className='absolute bottom-0 flex h-[5vh] w-[100vw] items-center bg-none text-center'>
+        <div className='absolute bottom-0 z-10 flex h-[5vh] w-[100vw] items-center bg-scBlack-100 text-center'>
             {/* <div className='absolute right-[2vw] h-full w-1/4'>
                 <div className='absolute top-0 mt-10 flex items-center'>
                     <a href='/'>
@@ -30,6 +30,9 @@ const Footer = ({}) => {
             >
                 Elijah Posnikov.
             </a>
+            <p className='float-right ml-[10px] text-xs text-gray-500'>
+                Data supplied by data.police.uk
+            </p>
         </div>
     );
 };

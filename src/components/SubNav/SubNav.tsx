@@ -1,11 +1,11 @@
 import Button from '@/components/Common/Button/Button';
 import React from 'react';
 
-interface NavBarProps {}
+interface SubNavProps {}
 
-const NavBar = ({}) => {
+const SubNav = ({}) => {
     return (
-        <div className='fixed z-10 flex h-[5vh] w-[100vw] items-center border-r-[1px] border-scBorder bg-scBlack-100 text-center'>
+        <div className='fixed top-[5vh] z-10 flex h-[5vh] w-[100vw] items-center border-r-[1px] border-scBorder bg-scBlack-300 text-center'>
             {/* <div className='absolute right-[2vw] h-full w-1/4'>
                 <div className='absolute top-0 mt-10 flex items-center'>
                     <a href='/'>
@@ -28,4 +28,4 @@ const NavBar = ({}) => {
     );
 };
 
-export default NavBar;
+export default SubNav;
